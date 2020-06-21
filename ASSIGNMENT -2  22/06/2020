@@ -1,0 +1,358 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled2.ipynb",
+      "provenance": [],
+      "authorship_tag": "ABX9TyP9IrmiBE70DEneN9F1WTEO",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/ganapam/mahendra-/blob/master/ASSIGNMENT%20-2%20%2022/06/2020\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "fa0nqvvawPAQ",
+        "colab_type": "text"
+      },
+      "source": [
+        "1. Write a program python to check whether a person is eligible for voting or not using if else"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "82-05jt6wPWy",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 51
+        },
+        "outputId": "e3b5d950-017b-49a9-d047-d2aa7216c3cf"
+      },
+      "source": [
+        "age = int(input(\"Enter Age : \"))\n",
+        "if age>=18:\n",
+        "        status=\"Eligible\"\n",
+        "else:\n",
+        "    status=\"Not Eligible\"\n",
+        "print(\"You are \",status,\" for Vote.\")"
+      ],
+      "execution_count": 35,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Enter Age : 19\n",
+            "You are  Eligible  for Vote.\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "Byal1SYI2gpC",
+        "colab_type": "text"
+      },
+      "source": [
+        "2. Write a program to check whether a number is even or odd using if else"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "zMAH72cq2q5H",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 51
+        },
+        "outputId": "92281e4e-5680-4172-a5c4-3aad17403c2c"
+      },
+      "source": [
+        "n=int(input(\"enter a integer\")) \n",
+        "if n%2==0:\n",
+        "   print(\"it is even number\") \n",
+        "else:\n",
+        "   print(\"it is odd number\")"
+      ],
+      "execution_count": 36,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "enter a integer32\n",
+            "it is even number\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "BleaFHXV3SGm",
+        "colab_type": "text"
+      },
+      "source": [
+        "3. Write a program to print the string in inverse order by using string indexing"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "DSlyCOhq3m5t",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "7bede828-37f9-4f51-e2ae-1307c0046a82"
+      },
+      "source": [
+        "a=\"mahi\"[:: -1]\n",
+        "print(a)"
+      ],
+      "execution_count": 37,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "iham\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "pypWvHt637tQ",
+        "colab_type": "text"
+      },
+      "source": [
+        "4. Write a python program to check whether a number is positive or not using if else"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "olt7ZuIp4Iqc",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 51
+        },
+        "outputId": "cdcd2d93-11eb-4a8e-f028-5ed8423d8cce"
+      },
+      "source": [
+        "n=int(input(\"enter n\")) \n",
+        "if n==0:\n",
+        "   print(\"number is zero\") \n",
+        "else:\n",
+        "  if n>0:\n",
+        "   print(\"n is positive \") \n",
+        "  else:\n",
+        "   print(\" n is negative\")"
+      ],
+      "execution_count": 39,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "enter n24\n",
+            "n is positive \n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "OqVJGfJL47cv",
+        "colab_type": "text"
+      },
+      "source": [
+        "5. Write a program to read a character and print the given character is vowel or consonent"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "IM3ey8CL5NHm",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 51
+        },
+        "outputId": "ef448add-0a58-45c5-c579-418ca5a06e34"
+      },
+      "source": [
+        "ch=input(\"enter a character:\") \n",
+        "if(ch=='A' or ch=='a' or ch=='E' or ch=='e' or ch=='o') :\n",
+        "  print(ch, \"is vowel\") \n",
+        "else:\n",
+        "  print(ch, \" isconsonent\")"
+      ],
+      "execution_count": 40,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "enter a character:a\n",
+            "a is vowel\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "d1c3MN2j6KHP",
+        "colab_type": "text"
+      },
+      "source": [
+        "6. Write a python program to find the roots of quadratic equation using elif"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "vt-TbppD6oQn",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 105
+        },
+        "outputId": "36d3f547-214d-43fd-e59c-54aebe71de46"
+      },
+      "source": [
+        "a=float(input(\"enter the value of a quadratic equation: \")) \n",
+        "b=float(input(\"enter the value of b quadratic equation: \"))\n",
+        "c=float(input(\"enter the value of c quadratic equation: \")) \n",
+        "discriminant =(b*b) -(4*a*c) \n",
+        "if(discriminant >0) :\n",
+        "  root1 =(-b + math. sqrt(discriminant) /(2*a)) \n",
+        "  root2 =(-b - math. sqrt(discriminant) /(2*a)) \n",
+        "  print(\" roots are real and unequal\", r1, \"and\", r2) \n",
+        "elif(discriminant == 0):\n",
+        "  root1 = -b/(2*a) \n",
+        "  print(\"roots are real and same\", r1) \n",
+        "else:\n",
+        "  print(\"no real roots are there\")"
+      ],
+      "execution_count": 42,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "enter the value of a quadratic equation: 10\n",
+            "enter the value of b quadratic equation: 15\n",
+            "enter the value of c quadratic equation: 20\n",
+            "no real roots are there\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "3-B9_nsE9TIz",
+        "colab_type": "text"
+      },
+      "source": [
+        "7. Write a program to accept a number (1-5) and print the given number in words"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "zPCnHkBR9mBV",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 51
+        },
+        "outputId": "bb227d10-bad4-4b37-88f3-6030e9f19384"
+      },
+      "source": [
+        "number=(\" \",\" one\", \"two\", \"three\", \"four\", \"five\") \n",
+        "n=int(input(\"enter a number\")) \n",
+        "print(number [n])"
+      ],
+      "execution_count": 45,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "enter a number2\n",
+            "two\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "hSUpNkD0-TVY",
+        "colab_type": "text"
+      },
+      "source": [
+        "8.write a program using weather nestedif to check whether a number is positive or negative or zero using python"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "HftWATK7_Qdr",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 51
+        },
+        "outputId": "6457100d-a71a-48a6-bdf5-60ad7f3b15fa"
+      },
+      "source": [
+        "a=float(input(\"enter a number \")) \n",
+        "if a>0:\n",
+        "   print(\"positive number\") \n",
+        "elif a==0:\n",
+        "   print(\"zero\") \n",
+        "else:\n",
+        "   print(\"negative number\")"
+      ],
+      "execution_count": 46,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "enter a number 24\n",
+            "positive number\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    }
+  ]
+}

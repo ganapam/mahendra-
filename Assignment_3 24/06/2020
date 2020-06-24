@@ -1,0 +1,310 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Copy of Untitled3.ipynb",
+      "provenance": [],
+      "authorship_tag": "ABX9TyMRwPhokFFD86LKKrlDDuQ/",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/ganapam/mahendra-/blob/master/Assignment_3%2024/06/2020\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "GbqFWpsQhvRv",
+        "colab_type": "text"
+      },
+      "source": [
+        "1. Write a python program to find the area of circle using math functions"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "fZYFS1nbiLo6",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 71
+        },
+        "outputId": "8678c018-b7a1-4e5f-9d4c-484255af2a5f"
+      },
+      "source": [
+        "import math\n",
+        "radius=float(input(\"Enter the radius of the circle:\")) \n",
+        "area=math.pi*(math.pow(radius,2)) \n",
+        "result=round(area, 3) \n",
+        "print(\"the area of the circle with radius \", radius, \"is:\", result)"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Enter the radius of the circle:3\n",
+            "the area of the circle with radius  3.0 is: 28.274\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "oW1RT8ddjXUH",
+        "colab_type": "text"
+      },
+      "source": [
+        "2. Write a program to find area of a regular polygon using math functions\n",
+        " \n",
+        " \n",
+        "Formula:area=(s^2n)/(4tan(pi/n) \n",
+        "Where s is the length of any side and n is the number of sides"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "Z6zHdd-FjsDM",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 88
+        },
+        "outputId": "b1dfe77c-3026-4910-e40c-b2f239298760"
+      },
+      "source": [
+        "s=float(input(\"enter the length of any side:\")) \n",
+        "n=int(input(\"enter the number of sides in the regular polygon:\")) \n",
+        "numerator=math.pow(s,2)*n\n",
+        "denominator=4*(math.tan(math.pi/n)) \n",
+        "area=numerator/denominator\n",
+        "print(\"the area of the regular polygon is:\",area)"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "enter the length of any side:5\n",
+            "enter the number of sides in the regular polygon:5\n",
+            "the area of the regular polygon is: 43.01193501472417\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "qBNnJT6FmjOc",
+        "colab_type": "text"
+      },
+      "source": [
+        " 3. Write a python program to find area of a segment of a circle using math function"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "axrkaByS1nFo",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 88
+        },
+        "outputId": "ec75daa7-e18a-4e55-c9d4-8e6350e0739c"
+      },
+      "source": [
+        " import math\n",
+        "r= float(input(\"Enter the radius of the circle: \"))\n",
+        "c= int(input(\"Enter the value of central angle in degrees: \"))\n",
+        "part_one= (math.pow(r,2))/2\n",
+        "part_two= ((((math.pi)/180)*c)-math.sin(c))\n",
+        "area= part_one*part_two\n",
+        "print(\"Area of the segment of a circle of radius\",r, \"and central angle\",c,\"is:\",area)"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Enter the radius of the circle: 2\n",
+            "Enter the value of central angle in degrees: 30\n",
+            "Area of the segment of a circle of radius 2.0 and central angle 30 is: 3.0232607993823213\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "3d4hwT2gvjsF",
+        "colab_type": "text"
+      },
+      "source": [
+        " 4.write a python program to generate random numbers  from list 1[100, 1,2,3,30,40)]"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "8z5bsgGKvkeF",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 71
+        },
+        "outputId": "0f797464-8a4e-4761-cd51-1f32d86dd70f"
+      },
+      "source": [
+        "from random import shuffle\n",
+        "mylist=[100, 1,2,3,30,40,\"hey\",\"hello\"]\n",
+        "print(\"list before shuffling:\", mylist) \n",
+        "shuffle(mylist) \n",
+        "print(\"list after shuffling:\", mylist)"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "list before shuffling: [100, 1, 2, 3, 30, 40, 'hey', 'hello']\n",
+            "list after shuffling: [40, 3, 'hey', 1, 'hello', 2, 100, 30]\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "ImyovI15wmSv",
+        "colab_type": "text"
+      },
+      "source": [
+        "Write a program to generate random numbers between 1 and 10,000 and difference between each random number is 50"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "zXpx_DvLyCu-",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 54
+        },
+        "outputId": "c51469da-6ee7-460f-d122-5133faa32175"
+      },
+      "source": [
+        "import random\n",
+        "print(\"Random number between 1 and 10000 which has a step of 50:\", random.randrange(1, 10000,50))"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Random number between 1 and 10000 which has a step of 50: 2051\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "ms04zq9p0Gd9",
+        "colab_type": "text"
+      },
+      "source": [
+        " 6. Write a python program by using math module to find\n",
+        " \n",
+        " \n",
+        "1) Sin600\n",
+        " \n",
+        "2) cos(pi)\n",
+        " \n",
+        "3) tan900\n",
+        " \n",
+        "4) angle of sin(0.8660254037844386)\n",
+        " \n",
+        "5)5^8\n",
+        " \n",
+        "6) Square root of 400\n",
+        " \n",
+        "7) The value of 5^e\n",
+        " \n",
+        "8) The value of Log(1024), base 2\n",
+        " \n",
+        "9) The value of Log(1024), base 10\n",
+        " \n",
+        "10)The Floor and Ceiling value of 23.56"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "0TOpmO7o00HQ",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 225
+        },
+        "outputId": "0179ee5f-f85f-42dd-b3d1-6c31ea4a34d7"
+      },
+      "source": [
+        " import math\n",
+        "print(\"Sine of 60=\",math.sin(60))\n",
+        "print(\"Cos of pi=\",math.cos(math.pi))\n",
+        "print(\"Tan of 90=\",math.tan(90))\n",
+        "print(\"Angle of sin 0.8660254037844386=\",math.sin(0.8660254037844386))\n",
+        "print(\"5^8=\",math.pow(5,8))\n",
+        "print(\"Square root of 400=\",math.sqrt(400))\n",
+        "print(\"The value of 5^e=\",math.pow(5,math.e))\n",
+        "print(\"Log(1024), base 2=\",math.log(1024,2))\n",
+        "print(\"Log(1024), base 10=\",math.log(1024,10))\n",
+        "print(\"Floor of 23.56=\",math.floor(23.56))\n",
+        "print(\"Ceiling of 23.56=\",math.ceil(23.56))"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Sine of 60= -0.3048106211022167\n",
+            "Cos of pi= -1.0\n",
+            "Tan of 90= -1.995200412208242\n",
+            "Angle of sin 0.8660254037844386= 0.7617599814162892\n",
+            "5^8= 390625.0\n",
+            "Square root of 400= 20.0\n",
+            "The value of 5^e= 79.43235916621322\n",
+            "Log(1024), base 2= 10.0\n",
+            "Log(1024), base 10= 3.0102999566398116\n",
+            "Floor of 23.56= 23\n",
+            "Ceiling of 23.56= 24\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    }
+  ]
+}

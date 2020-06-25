@@ -1,0 +1,266 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Copy of Untitled",
+      "provenance": [],
+      "authorship_tag": "ABX9TyPjZBT1Lr56rEaj936mEOgX",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/ganapam/mahendra-/blob/master/ASSIGNMENT%20-4%20\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "2cdQmjhw-wId",
+        "colab_type": "text"
+      },
+      "source": [
+        "1. Function that returns  first and last digit of a number"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "QhRDYv8B-xQj",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "c970cf0f-cadd-4ae1-f4d5-59c2bbc56d4a"
+      },
+      "source": [
+        " def firstDigit(n) : \n",
+        "    while n >= 10:  \n",
+        "        n = n / 10;  \n",
+        "    return int(n)  \n",
+        "def lastDigit(n) : \n",
+        "    return (n % 10) \n",
+        "n = 98562; \n",
+        "print(firstDigit(n), end = \" \")  \n",
+        "print(lastDigit(n))"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "9 2\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "kN8Ayss9-_PQ",
+        "colab_type": "text"
+      },
+      "source": [
+        " 2. Generate first N number of Fibonacci numbers. Take N value from user"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "nE8-MUi8_Evg",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "2c7a3e09-0c82-414f-eb7e-f8e210f28cb3"
+      },
+      "source": [
+        " def Fibonacci(n): \n",
+        "    if n<0: \n",
+        "        print(\"Incorrect input\") \n",
+        "    elif n==1: \n",
+        "        return 0 \n",
+        "    elif n==2: \n",
+        "        return 1\n",
+        "    else: \n",
+        "        return Fibonacci(n-1)+Fibonacci(n-2)  \n",
+        "print(Fibonacci(4))"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "2\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "mx8ZlmuN_Nxr",
+        "colab_type": "text"
+      },
+      "source": [
+        " 3. Take N number of marks and names from user and display the names of  failedstudents(marks<40). Take N value from user"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "DkXTj3hF_Y-o",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 225
+        },
+        "outputId": "8641349a-30f0-456f-a3da-b16ab6f212fb"
+      },
+      "source": [
+        " students=[]\n",
+        "for num in range(5):\n",
+        "    x=input(\"Enter name of students: \")\n",
+        "    students.append(x)\n",
+        " \n",
+        "marks=[]\n",
+        "for num in range(5):\n",
+        "    y=input(\"Enter marks of students:\")\n",
+        "    marks.append(y)\n",
+        " \n",
+        "report = input(\"Do you want to print class report?: \")\n",
+        "if report == 'yes':\n",
+        "    print(x[0],\":\", y[0])\n",
+        "    print(x[1],\":\", y[1])\n",
+        "    print(x[2],\":\", y[2])\n",
+        "    print(x[3],\":\", y[3])\n",
+        "    print(x[4],\":\", y[4])"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Enter name of students: Mahendra\n",
+            "Enter name of students: Manoj\n",
+            "Enter name of students: Madhu\n",
+            "Enter name of students: Ysr\n",
+            "Enter name of students: Jagan\n",
+            "Enter marks of students:10\n",
+            "Enter marks of students:20\n",
+            "Enter marks of students:30\n",
+            "Enter marks of students:40\n",
+            "Enter marks of students:50\n",
+            "Do you want to print class report?: 60\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "ih1nBfCr_7-l",
+        "colab_type": "text"
+      },
+      "source": [
+        " 4. Display multiplication table of K. Take k value from user"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "SRxl57-yAB6y",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 188
+        },
+        "outputId": "2862b25e-30f4-46a6-89b0-ffe08e3d75e3"
+      },
+      "source": [
+        " num = 12\n",
+        "for i in range(1, 11):\n",
+        "   print(num, 'x', i, '=', num*i)"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "12 x 1 = 12\n",
+            "12 x 2 = 24\n",
+            "12 x 3 = 36\n",
+            "12 x 4 = 48\n",
+            "12 x 5 = 60\n",
+            "12 x 6 = 72\n",
+            "12 x 7 = 84\n",
+            "12 x 8 = 96\n",
+            "12 x 9 = 108\n",
+            "12 x 10 = 120\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "O5wk_htHAInQ",
+        "colab_type": "text"
+      },
+      "source": [
+        " 5. Take numbers from user until the number is -1 and display the product and average of all numbers."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "a7pCmJRvANaH",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 85
+        },
+        "outputId": "6b797b07-f769-47a3-8df8-0afb61d939d6"
+      },
+      "source": [
+        " first_number = int(input(\"Please enter the first Value: \"))\n",
+        "second_number = int(input(\"Please enter another number: \"))\n",
+        "product = first_number * second_number\n",
+        "average = (first_number + second_number) / 2\n",
+        " \n",
+        "print('product is {}'.format(product))\n",
+        "print('average is {}'.format(average))"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Please enter the first Value: -2\n",
+            "Please enter another number: -1\n",
+            "product is 2\n",
+            "average is -1.5\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    }
+  ]
+}

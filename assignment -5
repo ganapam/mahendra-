@@ -1,0 +1,454 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled5.ipynb",
+      "provenance": [],
+      "authorship_tag": "ABX9TyPyvb7xaQqqf4De9x07Dc81",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/ganapam/mahendra-/blob/master/assignment%20-5\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "T1MeWzxccjis",
+        "colab_type": "text"
+      },
+      "source": [
+        " 1. Program to calculate the length of a string."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "pgZIEUU6cmtB",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 51
+        },
+        "outputId": "0a1b852d-ea71-446e-c12d-9818a0bca0c3"
+      },
+      "source": [
+        "string=input(\"Enter a string: \")\n",
+        "length=len(string)\n",
+        "print(\"The length of\",string,\"is\",length)"
+      ],
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Enter a string: Telugu\n",
+            "The length of Telugu is 6\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "0XcLym7Wcsrs",
+        "colab_type": "text"
+      },
+      "source": [
+        " 2. Program to find the character frequency in a string"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "CZqcIfHscwCu",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 71
+        },
+        "outputId": "35533490-7901-43bc-b492-e2df3b56e1dc"
+      },
+      "source": [
+        " string=input(\"Enter a string: \")\n",
+        "frequency={}\n",
+        "for i in string:\n",
+        "    if i in frequency:\n",
+        "        frequency[i]+=1\n",
+        "    else:\n",
+        "        frequency[i]=1\n",
+        "print(\"Character frequency\",string,\"is:\",frequency)"
+      ],
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Enter a string: Telugu\n",
+            "Character frequency Telugu is: {'T': 1, 'e': 1, 'l': 1, 'u': 2, 'g': 1}\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "Zla3jFoyc1DC",
+        "colab_type": "text"
+      },
+      "source": [
+        " 3. Program to get a single string from two given strings, separated by a space and swap the first character of each string."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "awfxwjzoc5C8",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 85
+        },
+        "outputId": "d454e9f9-9a4f-4d24-ec77-d5b79d780c78"
+      },
+      "source": [
+        "str1= input(\"Enter the first string: \")\n",
+        "str2= input(\"Enter the secnd string: \")\n",
+        "str1_swap= str2[:1]+str1[1:]\n",
+        "str2_swap= str1[:1]+str2[1:]\n",
+        "#n=str1.pop(0)\n",
+        "#m=str2.pop(0)\n",
+        "#p=list(str1_swap)\n",
+        "#q=list(str2_swap)\n",
+        "#str1=m+p\n",
+        "#str2=n+q\n",
+        "print(str1_swap)\n",
+        "print(str2_swap)"
+      ],
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Enter the first string: Xyz\n",
+            "Enter the secnd string: Abc\n",
+            "Ayz\n",
+            "Xbc\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "pFYiI_dodAv6",
+        "colab_type": "text"
+      },
+      "source": [
+        " 4. Take input from the user and displays that input back in upper and lower cases."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "S0bx9VC7dFq1",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 71
+        },
+        "outputId": "005da38d-93ef-4fdd-ed29-1ea1852736c8"
+      },
+      "source": [
+        " string= input(\"Enter a string: \")\n",
+        "upper_case=string.upper()\n",
+        "lower_case=string.lower()\n",
+        "print(\"The string\",string,\"in upper case is\",upper_case,\"and in lower case is\",lower_case)"
+      ],
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Enter a string: Telugu\n",
+            "The string Telugu in upper case is TELUGU and in lower case is telugu\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "hOu83FWEdQ9F",
+        "colab_type": "text"
+      },
+      "source": [
+        " 5. Program to remove a newline."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "0TaoGb1udUqV",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "outputId": "83912d88-ecb2-419a-f593-e7623fedae9e"
+      },
+      "source": [
+        " string= \"Python\\n\"\n",
+        "string.rstrip('\\n')"
+      ],
+      "execution_count": 11,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "application/vnd.google.colaboratory.intrinsic": {
+              "type": "string"
+            },
+            "text/plain": [
+              "'Python'"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 11
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "zLtYCZsMdYXK",
+        "colab_type": "text"
+      },
+      "source": [
+        " 6. Program to count occurrences of a substring in a string."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "6f1T11WOdbyR",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 88
+        },
+        "outputId": "0f3e4f36-3a25-4776-81fc-25c20ed85ecc"
+      },
+      "source": [
+        " string= input(\"Enter a string: \")\n",
+        "substr= input(\"Enter a substring present in the string: \")\n",
+        "string.count(substr)"
+      ],
+      "execution_count": 12,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Enter a string: Telugu\n",
+            "Enter a substring present in the string: Gu\n"
+          ],
+          "name": "stdout"
+        },
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "0"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 12
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "UexT1X-jdlpA",
+        "colab_type": "text"
+      },
+      "source": [
+        " 7. Program to convert a string in a list."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "MJRVn2JDduBe",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 71
+        },
+        "outputId": "167924d1-e959-45eb-cacf-d47a1e64289a"
+      },
+      "source": [
+        " string=input(\"Enter a string: \")\n",
+        "mylist=list(string)\n",
+        "print(\"Converted list is\",mylist)"
+      ],
+      "execution_count": 13,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Enter a string: Telugu\n",
+            "Converted list is ['T', 'e', 'l', 'u', 'g', 'u']\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "q-3zvpDbdy2e",
+        "colab_type": "text"
+      },
+      "source": [
+        " 8. Program to delete a character."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "CMr7I8Hvd2C3",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 85
+        },
+        "outputId": "bcae9368-606f-421c-9657-29df8529c96c"
+      },
+      "source": [
+        " string=input(\"Enter a string: \")\n",
+        "char=input(\"Enter the character to delete: \")\n",
+        "print(\"The resultant string is\",string.replace(char,\"\"))\n",
+        "print(\"The deleted char is\",char,\".\")"
+      ],
+      "execution_count": 14,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Enter a string: Python\n",
+            "Enter the character to delete: Thon\n",
+            "The resultant string is Python\n",
+            "The deleted char is Thon .\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "H7PhO8-ad-Rv",
+        "colab_type": "text"
+      },
+      "source": [
+        " 9. Program to print every character of a string entered by user in a new line using loop."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "OFxqm5jmeDFK",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 154
+        },
+        "outputId": "cf57bfca-f503-4d95-8e70-7f51ef17e414"
+      },
+      "source": [
+        " string=input(\"Enter a string: \")\n",
+        "print(\"Characters in the string\",string,\"are:\")\n",
+        "for i in string:\n",
+        "    print(i)"
+      ],
+      "execution_count": 15,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Enter a string: Python\n",
+            "Characters in the string Python are:\n",
+            "P\n",
+            "y\n",
+            "t\n",
+            "h\n",
+            "o\n",
+            "n\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "u6H3UOL-eIWR",
+        "colab_type": "text"
+      },
+      "source": [
+        " 10. Program to find the length of the string \"refrigerator\" without using len function."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "ATlL36uTeLgr",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 54
+        },
+        "outputId": "c122b94c-7b28-4e7c-b463-3499cf573120"
+      },
+      "source": [
+        " string= \"refrigerator\"\n",
+        "length=0\n",
+        "for i in string:\n",
+        "    length+=1\n",
+        "print(\"The length of the string\",string,\"is:\",length)"
+      ],
+      "execution_count": 16,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "The length of the string refrigerator is: 12\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,687 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled7.ipynb",
+      "provenance": [],
+      "authorship_tag": "ABX9TyN0jGoVnPmOsuKBSKHkgCv2",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/ganapam/mahendra-/blob/master/assignment%20%20-%207\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "yX6n2XroVU1u",
+        "colab_type": "text"
+      },
+      "source": [
+        "1.What is dictionary in Python? Explain with an example\n",
+        " \n",
+        "It is an unordered sequence data structure. Dictionaries are denoted by curly braces { }. It is a collection of various key:value pairs. Keys are immutable and unique. Values are mutable and their values can be duplicated. \n",
+        "For example:"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "HKbJXMh_VcAU",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 54
+        },
+        "outputId": "23dc917c-ec90-4b57-91cf-3779684070b4"
+      },
+      "source": [
+        " dict1 = {\"one\":1,\"two\":2,\"three\":3}\n",
+        "print(\"Dictionary:\",dict1)"
+      ],
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Dictionary: {'one': 1, 'two': 2, 'three': 3}\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "JBh2prsgV2RC",
+        "colab_type": "text"
+      },
+      "source": [
+        "2.write a Python program to sum all the items in a list."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "xTXUve0pWat0",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 54
+        },
+        "outputId": "f851e3b9-e891-40ec-d08e-fe866bbb3858"
+      },
+      "source": [
+        " def sum_list(mylist):\n",
+        "  sum = 0\n",
+        "  for item in mylist:\n",
+        "    sum = sum + item\n",
+        "  print(\"Sum of all the items in the given list is:\",sum)\n",
+        "sum_list([1,5,2,8,0,3,9,4,5,1,5,6,2,7])"
+      ],
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Sum of all the items in the given list is: 58\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "ZHTFXY6tXejx",
+        "colab_type": "text"
+      },
+      "source": [
+        "3. Write a Python program to create a list of empty dictionaries."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "kpzZ0nuZXiYt",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 71
+        },
+        "outputId": "e51e138a-b5e8-4dff-bfd2-33f1c89160e1"
+      },
+      "source": [
+        " n = int(input(\"Enter number of empty dictionaries: \"))\n",
+        "mydict = {}\n",
+        "mylist = [mydict] * n\n",
+        "print(\"List of\",n,\"empty dictionaries:\",mylist)"
+      ],
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Enter number of empty dictionaries: 4\n",
+            "List of 4 empty dictionaries: [{}, {}, {}, {}]\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "XkUoKP_8X2si",
+        "colab_type": "text"
+      },
+      "source": [
+        "4. Write a Python program to access dictionary keys element by index."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "fpOtujYXX4ho",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 156
+        },
+        "outputId": "c6e27d00-d37a-4f60-e4e7-4ef326e6ddc9"
+      },
+      "source": [
+        " dict1 = {\"blue\":1, \"green\":2, \"yellow\":3, \"red\":4, \"black\":5, \"purple\":6}\n",
+        "print(\"Given dictionary:\",dict1)\n",
+        "mylist = list(dict1)\n",
+        "index = 0\n",
+        "for item in mylist:\n",
+        "  print(\"Index \",index,\"has:\",mylist[index])\n",
+        "  index = index + 1"
+      ],
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Given dictionary: {'blue': 1, 'green': 2, 'yellow': 3, 'red': 4, 'black': 5, 'purple': 6}\n",
+            "Index  0 has: blue\n",
+            "Index  1 has: green\n",
+            "Index  2 has: yellow\n",
+            "Index  3 has: red\n",
+            "Index  4 has: black\n",
+            "Index  5 has: purple\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "7DZnzhxWYHH8",
+        "colab_type": "text"
+      },
+      "source": [
+        " 5. Write a Python program to iterate over dictionaries using for loops"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "fI04YRuXYJgV",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 413
+        },
+        "outputId": "2c327e39-9039-4de4-d576-cd2308e9a8ad"
+      },
+      "source": [
+        " dict1 = {\"blue\":1, \"green\":2, \"yellow\":3, \"red\":4, \"black\":5, \"purple\":6}\n",
+        "print(\"Given dictionary:\",dict1)\n",
+        "print(\"Keys present in the given dictionary:\")\n",
+        "for item in dict1:\n",
+        "  print(item)\n",
+        " \n",
+        "print(\"Values present in the given dictionary:\")\n",
+        "for item in dict1.values():\n",
+        "  print(item)\n",
+        " \n",
+        "print(\"Key:Value pairs in the given dictionary:\")\n",
+        "for (k,v) in dict1.items():\n",
+        "  print(k,\":\",v)"
+      ],
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Given dictionary: {'blue': 1, 'green': 2, 'yellow': 3, 'red': 4, 'black': 5, 'purple': 6}\n",
+            "Keys present in the given dictionary:\n",
+            "blue\n",
+            "green\n",
+            "yellow\n",
+            "red\n",
+            "black\n",
+            "purple\n",
+            "Values present in the given dictionary:\n",
+            "1\n",
+            "2\n",
+            "3\n",
+            "4\n",
+            "5\n",
+            "6\n",
+            "Key:Value pairs in the given dictionary:\n",
+            "blue : 1\n",
+            "green : 2\n",
+            "yellow : 3\n",
+            "red : 4\n",
+            "black : 5\n",
+            "purple : 6\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "MHgXre4aYW-s",
+        "colab_type": "text"
+      },
+      "source": [
+        "6. Write a Python program to sum all the items in a dictionary."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "QakABd_mYZQu",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 88
+        },
+        "outputId": "8e667b92-b771-4a99-9315-53722b689880"
+      },
+      "source": [
+        " dict1 = {1:100, 2:200, 3:300, 4:400, 5:500}\n",
+        "print(\"Given dictionary:\",dict1)\n",
+        "sum=0\n",
+        "for value in dict1.values():\n",
+        "  sum = sum + value\n",
+        "print(\"Sum of all the values in the given dictionary:\",sum)\n",
+        " \n",
+        "for key in dict1.keys():\n",
+        "  sum = sum + key\n",
+        "print(\"Sum of all keys in the given dictionary:\",sum)"
+      ],
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Given dictionary: {1: 100, 2: 200, 3: 300, 4: 400, 5: 500}\n",
+            "Sum of all the values in the given dictionary: 1500\n",
+            "Sum of all keys in the given dictionary: 1515\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "cZUspbN0YlZB",
+        "colab_type": "text"
+      },
+      "source": [
+        " 7. Write a Python script to concatenate following dictionaries to create a new \n",
+        "one. Sample Dictionary :\n",
+        " \n",
+        "a. dic1={1:10, 2:20}\n",
+        " \n",
+        "b. dic2={3:30, 4:40}\n",
+        " \n",
+        "c. dic3={5:50,6:60}\n",
+        " \n",
+        "Expected Result: {1:10, 2:20, 3:30, 4:40, 5:50, 6:60}"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "YkTbFYAIY7-4",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 54
+        },
+        "outputId": "79a43f09-bb08-4aaf-8b6e-ca1ba3786b65"
+      },
+      "source": [
+        " dict1 = {1:10, 2:20}\n",
+        "dict2 = {3:30, 4:40}\n",
+        "dict3 = {5:50, 6:60}\n",
+        "dict2.update(dict3)\n",
+        "dict1.update(dict2)\n",
+        "print(\"Required result:\",dict1)"
+      ],
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Required result: {1: 10, 2: 20, 3: 30, 4: 40, 5: 50, 6: 60}\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "eNSxUEVnZP4V",
+        "colab_type": "text"
+      },
+      "source": [
+        "8. Write a Python program to create a tuple"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "ytgMybNoZR5V",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "d9e11e05-7465-415a-c76e-23cf3e949c98"
+      },
+      "source": [
+        " t1 = (1,2,3,4,5)\n",
+        "print(t1, type(t1))"
+      ],
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "(1, 2, 3, 4, 5) <class 'tuple'>\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "S0HJ7UlQZsFp",
+        "colab_type": "text"
+      },
+      "source": [
+        "9. Write a Python program to create a tuple with different data types"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "ay4QzTvSZtpT",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 54
+        },
+        "outputId": "90d6cab3-947b-4b2d-ea5b-056f4fceafac"
+      },
+      "source": [
+        " t1 = (1,2.5,\"Bonjour\",[\"Hello\",1,6])\n",
+        "print(t1, type(t1))"
+      ],
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "(1, 2.5, 'Bonjour', ['Hello', 1, 6]) <class 'tuple'>\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "53u7-wgaZ5ra",
+        "colab_type": "text"
+      },
+      "source": [
+        "10. Write a Python program to convert a tuple to a string"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "LuGlr4d9Z7Oc",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "5f561325-c1fe-4761-edd8-3eaf12045606"
+      },
+      "source": [
+        " t1 = (\"N\",\"i\",\"m\",\"b\",\"u\",\"s\")\n",
+        "str = \"\".join(t1)\n",
+        "print(\"Tuple converted string:\",str)"
+      ],
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Tuple converted string: Nimbus\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "45F2tZQkaL_E",
+        "colab_type": "text"
+      },
+      "source": [
+        "11. Write a Python program to slice a tuple"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "t0hoIJXXaNes",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "9a03c34a-5183-461c-ce8e-9f459ead5528"
+      },
+      "source": [
+        " t1 = (1,2,3,4,5,6,7,8,9,10)\n",
+        "slice_tup = (t1[2:6])\n",
+        "print(\"Sliced tuple:\",slice_tup)"
+      ],
+      "execution_count": 11,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Sliced tuple: (3, 4, 5, 6)\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "ouN_730Nacf2",
+        "colab_type": "text"
+      },
+      "source": [
+        "12. Write a Python program to find the length of a tuple."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "5AbEUABNaeFb",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "f84008d5-676e-4aa0-ad7b-2ab15eadfded"
+      },
+      "source": [
+        " t1 = (1,2,3,4,5,6,7,8,9,10)\n",
+        "count = 0\n",
+        "for item in t1:\n",
+        "  count+=1\n",
+        "print(\"Length of the tuple:\",count)"
+      ],
+      "execution_count": 12,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Length of the tuple: 10\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "ZrAvXELjaqy0",
+        "colab_type": "text"
+      },
+      "source": [
+        " 13..Write a Python program to convert a tuple to a dictionary."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "Smfn10r4cbtj",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 54
+        },
+        "outputId": "7e970cf5-14db-4814-9c25-823214a9b571"
+      },
+      "source": [
+        " t1 = ((\"one\",1),(\"two\",2),(\"three\",3),(\"four\",4),(\"five\",5))\n",
+        "converted_dict = dict(t1)\n",
+        "print(\"Converted Dictionary:\",converted_dict)"
+      ],
+      "execution_count": 13,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Converted Dictionary: {'one': 1, 'two': 2, 'three': 3, 'four': 4, 'five': 5}\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "eSh1ca_8c3Ew",
+        "colab_type": "text"
+      },
+      "source": [
+        "14. Write a Python program to reverse a tuple"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "MXebCZfOc462",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 54
+        },
+        "outputId": "82f17186-ca9d-43ba-88f8-11d1269950a6"
+      },
+      "source": [
+        " t1 = (1,2,3,4,5,6,7,8,9,10)\n",
+        "print(\"Reversed Tuple:\",t1[::-1])"
+      ],
+      "execution_count": 14,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Reversed Tuple: (10, 9, 8, 7, 6, 5, 4, 3, 2, 1)\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "yVoU-AtvdD1e",
+        "colab_type": "text"
+      },
+      "source": [
+        "15. Write a Python program to convert a list of tuples into a dictionary"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "SKFEjr2ydF8i",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 54
+        },
+        "outputId": "fd4eae07-02f4-4439-963f-c1f853d2b8b2"
+      },
+      "source": [
+        " mylist = [(\"one\",1),(\"two\",2),(\"three\",3),(\"four\",4)]\n",
+        "dict_converted = dict(mylist)\n",
+        "print(\"Dictionary converted list:\",dict_converted)"
+      ],
+      "execution_count": 15,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Dictionary converted list: {'one': 1, 'two': 2, 'three': 3, 'four': 4}\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "NQmN14-ldUDo",
+        "colab_type": "text"
+      },
+      "source": [
+        "16. Write a Python program to convert a list to a tuple."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "C24qssp8dV84",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 54
+        },
+        "outputId": "2bfe77ec-1a6e-4cfa-a623-e51983e3cfe7"
+      },
+      "source": [
+        " mylist = [\"Hello\",\"Hey\",\"Hi\",\"Hola\",\"Bonjour\"]\n",
+        "print(\"Tuple converted list:\",tuple(mylist))"
+      ],
+      "execution_count": 16,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Tuple converted list: ('Hello', 'Hey', 'Hi', 'Hola', 'Bonjour')\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    }
+  ]
+}
